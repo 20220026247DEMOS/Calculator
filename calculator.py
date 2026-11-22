@@ -11,8 +11,18 @@ def add(a, b):
 
 
 
+
+
+
+
+
+
+
+
 def sub(a, b):
-    return a - b
+    diff = a - b
+    
+    return diff
 
 def div(a, b):
     try:
