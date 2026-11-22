@@ -8,4 +8,8 @@ def div(a, b):
     return a/b
 
 def mult(a, b):
+    if not isinstance(a,(int, float)) or not isinstance(b,(int,float)):
+        return "Error: Input must be numbers."
+    
     return a*b
+
