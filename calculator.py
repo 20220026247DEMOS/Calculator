@@ -2,23 +2,7 @@ def add(a, b):
     sum = a + b
     
     return sum
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 def sub(a, b):
     diff = a - b
     
@@ -30,26 +14,10 @@ def div(a, b):
     except ZeroDivisionError:
         return "You cannot divide a number by zero, sorry :9"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def mult(a, b):
+    if not isinstance(a,(int, float)) or not isinstance(b,(int,float)):
+        return "Error: Input must be numbers."
+    
     return a*b
  
 x = int(input("Enter your first value: "))
@@ -62,9 +30,9 @@ print("1: Addition")
 print("2: Subtraction")
 print("3: Division")
 print("4: Multiplication")
-input = input("What do operation do you want to do? ")
+choice = input("What do operation do you want to do? ")
 
-match input:
+match choice:
     case "1":
         print(add(x,y))
     case "2":
@@ -73,3 +41,4 @@ match input:
         print(div(x,y))
     case "4":
         print(mult(x,y))
+
